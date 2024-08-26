@@ -1,5 +1,7 @@
 # Hono getting started
 
+This is a basic Hono template already set up for local development and deployment to AWS Lambda.
+
 ## Installation
 
 ```bash
