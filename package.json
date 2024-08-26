@@ -2,10 +2,10 @@
   "name": "my-app",
   "type": "module",
   "scripts": {
-    "update": "FUNCTION_NAME=helloHono; aws lambda update-function-code --zip-file fileb://lambda.zip --function-name $FUNCTION_NAME",
-    "dev": "tsx watch src/nodejs.ts",
-    "build": "esbuild --bundle --outfile=./dist/index.js --platform=node --target=node20 ./src/aws.ts",
-    "zip": "zip -j lambda.zip dist/index.js",
+    "update": "FUNCTION_NAME=helloHono; aws lambda update-function-code --zip-file fileb://.lambda/lambda.zip --function-name $FUNCTION_NAME",
+    "dev": "tsx watch .harness/nodejs.ts",
+    "build": "esbuild --bundle --outfile=./dist/index.js --platform=node --target=node20 .harness/aws.ts",
+    "zip": "zip -j lambda.zip dist/index.js; mv lambda.zip .lambda/",
     "aws": "run-s build zip update"
   },
   "devDependencies": {

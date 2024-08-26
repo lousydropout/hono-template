@@ -1,4 +1,4 @@
-import { app } from "./app";
+import { app } from "../src/app";
 import { serve } from "@hono/node-server";
 
 const port = 3000;
