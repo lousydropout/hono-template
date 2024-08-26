@@ -1,8 +1,10 @@
 import { Hono } from "hono";
 import { logger } from "../utils/logger";
+import { cors } from "../utils/cors";
 
 const app = new Hono();
 app.use(logger());
+app.use("/*", cors());
 
 app.get("/", (c) => {
   return c.text("Hello Hono!");
