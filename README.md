@@ -10,7 +10,7 @@ pnpm install
 
 ## Update API logic
 
-Entrypoint: `src/app.ts`
+Entrypoint: `src/api/app.ts`
 
 ## Local Development
 
